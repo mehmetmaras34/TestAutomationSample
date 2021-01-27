@@ -27,23 +27,13 @@ namespace TestAutomation_Selenium_Sample.Utillities
         public IWebDriver SetupFirefoxDriver(string driver)
         {
             FirefoxOptions firefoxOptions = new FirefoxOptions();
-            firefoxOptions.AddArgument("start-maximized");
-            firefoxOptions.AddArgument("test-type");
-            firefoxOptions.AddArgument("disable-popup-blocking");
-            firefoxOptions.AddArgument("ignore-certificate-errors");
-            firefoxOptions.AddArgument("disable-translate");
-            firefoxOptions.AddArgument("disable-automatic-password-saving");
-            firefoxOptions.AddArgument("allow-silent-push");
-            firefoxOptions.AddArgument("disable-infobars");
-            firefoxOptions.AddArgument("disable-notifications");
-            firefoxOptions.AddAdditionalCapability("useAutomationExtension", false);
             webDriver = new FirefoxDriver(driver, firefoxOptions);
             return webDriver;
         }
        
         public IWebDriver SetupInternetExplorerDriver(string driver)
         {
-           webDriver = new ChromeDriver(driver);
+           webDriver = new InternetExplorerDriver(driver);
             return webDriver;
         }
         
