@@ -26,8 +26,7 @@ namespace TestAutomation_Selenium_Sample.Utillities
         
         public IWebDriver SetupFirefoxDriver(string driver)
         {
-            FirefoxOptions firefoxOptions = new FirefoxOptions();
-            webDriver = new FirefoxDriver(driver, firefoxOptions);
+            webDriver = new FirefoxDriver(driver);
             return webDriver;
         }
        
